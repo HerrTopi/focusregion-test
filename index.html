@@ -3,21 +3,26 @@
     <title>Focus Region Manager bug test</title>
   </head>
   <script type="module" src="test.js"></script>
-  <body>
-    <div id="main">
-      <div id="group1">
-        <input type="text" id="input1" />
-        <input type="text" id="input2" />
-      </div>
-      <div id="group2">
-        <input type="text" id="input3" />
-        <input type="text" id="input4" />
-      </div>
-      <button id="button1">Button 1</button>
-      <button id="button2">Button 2</button>
-      <button id="button3">Button 3</button>
-    </div>
+  <script type="module">
+    import { createFocusTrap } from "./test.js";
 
+    const main = document.getElementById("main");
+    console.log("create focus trap", main)
+    const fr = createFocusTrap(main)
+    console.log(fr)
+
+  </script>
+
+  <script>
+    function iframeloaded() {
+      console.log("iframeloaded")
+    }
+  </script>
+  <body>
+    <div id="main" >
+      <iframe id="iframe" src="./iframe.html" onload="iframeloaded()" ></iframe>
+    </div>
+    asdasdsad
     <button id="focusable1">Focusable 1</button>
     <button id="focusable2">Focusable 2</button>
     <button id="focusable3">Focusable 3</button>

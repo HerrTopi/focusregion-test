@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@instructure/ui": "^9.1.0",
+    "@instructure/ui": "8.53.2",
     "vite": "^5.3.1"
   }
 }
